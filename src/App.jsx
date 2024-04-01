@@ -22,7 +22,7 @@ function App() {
         {/* // BADGES */}
         <div className="specs">
           <h2>Badges</h2>
-          <h3><span>&lt;Badge color="gray" shape="square"&gt;</span>Badge Text<span>&lt;/Badge&gt;</span></h3>
+          <h3><pre><span>&lt;Badge color="gray" shape="square"&gt;</span>Badge Text<span>&lt;/Badge&gt;</span></pre></h3>
           <h3>Props</h3>
           <h4>color:</h4>
           <ul>
@@ -46,7 +46,7 @@ function App() {
         {/* // BANNERS */}
         <div className="specs">
           <h2>Banners</h2>
-          <h3><span>&lt;Banner title="Error", type="neutral"&gt;</span>(Optional) Banner Text<span>&lt;/Banner&gt;</span></h3>
+          <h3><pre><span>&lt;Banner title="Error", type="neutral"&gt;</span>(Optional) Banner Text<span>&lt;/Banner&gt;</span></pre></h3>
           <h3>Props</h3>
           <h4>type:</h4>
           <ul>
@@ -74,7 +74,7 @@ function App() {
         {/* // TOASTS */}
         <div className="specs">
           <h2>Toasts</h2>
-          <h3><span>&lt;Toast title="Error", type="neutral", position="upper-left"&gt;</span>Toast Text<span>&lt;/Toast&gt;</span></h3>
+          <h3><pre><span>&lt;Toast title="Error", type="neutral", position="upper-left"&gt;</span>Toast Text<span>&lt;/Toast&gt;</span></pre></h3>
           <h3>Props</h3>
           <h4>type:</h4>
           <ul>
@@ -109,7 +109,7 @@ function App() {
         {/* CARDS */}
         <div className="specs">
           <h2>Cards</h2>
-          <h3><span>&lt;Card title, icon="/upload.png", bgColor="#3F75FE"&gt;</span>Main Card Text<span>&lt;/Card&gt;</span></h3>
+          <h3><pre><span>&lt;Card title, icon="/upload.png", bgColor="#3F75FE"&gt;</span>Main Card Text<span>&lt;/Card&gt;</span></pre></h3>
           <h3>Props</h3>
           <h4>title:</h4>
           <ul>
@@ -133,10 +133,40 @@ function App() {
             </div>
         </div>
 
-        <div class="container" style={{fontSize: "1.25rem", fontFamily: "Inter"}}>
-          <Tooltip color="green">
+        {/* TOOLTIPS */}
+        <div className="specs">
+          <h2>Tooltips</h2>
+          <h3><pre><span>&lt;Tooltip color="black"&gt;<br />
+          &#9;&lt;Tooltip.DisplayText&gt;</span><br />
+          &#9;&#9;Tooltip Text<br /><span>
+          &#9;&lt;/Tooltip.DisplayText&gt;<br />
+          &#9;&lt;Tooltip.Popup&gt;<br />
+          &#9;&#9;&lt;Tooltip.PopupTitle&gt;<br />
+          </span>&#9;&#9;&#9;Tooltip Title<br /><span>
+          &#9;&#9;&lt;/Tooltip.PopupTitle&gt;<br />
+          &#9;&#9;&lt;Tooltip.PopupText&gt;<br />
+          </span>&#9;&#9;&#9;Tooltip Text<br /><span>
+          &#9;&#9;&lt;/Tooltip.PopupText&gt;<br />
+          &#9;&lt;/Tooltip.Popup&gt;<br />
+          &lt;/Tooltip&gt;</span></pre></h3>
+
+          <h3>Props</h3>
+          <h4>color:</h4>
+          <ul>
+            <li><Badge color="demo-white-bold">white-bold</Badge></li>
+            <li><Badge color="demo-white">white</Badge></li>
+            <li><Badge color="demo-blue-bold">blue-bold</Badge></li>
+            <li><Badge color="demo-blue">blue</Badge></li>
+            <li><Badge color="demo-purple-bold">purple-bold</Badge></li>
+            <li><Badge color="demo-purple">purple</Badge></li>
+            <li><Badge color="demo-green-bold">green-bold</Badge></li>
+            <li><Badge color="demo-green">green</Badge></li>
+          </ul>
+
+          <h3>Example</h3>
+          <Tooltip color="purple-bold" >
             <Tooltip.DisplayText>
-              This text has a tooltip!
+              <div style={{marginTop: "10px", display: "inline-block"}}>This text has a <span className='demo-purple-bold' style={{padding: "5px"}}>purple-bold</span> tooltip! Tooltip target text can be formatted however desired.</div>
             </Tooltip.DisplayText>
             <Tooltip.Popup>
               <Tooltip.PopupTitle>This is a tooltip title</Tooltip.PopupTitle>
@@ -144,6 +174,13 @@ function App() {
             </Tooltip.Popup>
           </Tooltip>
         </div>
+
+
+        <div class="container" style={{fontSize: "1.25rem", fontFamily: "Inter"}}>
+          
+        </div>
+
+
         <div className="container">
           <Testimonial person={{name: "Chris Freilich", title: "Cinematographer", image: "/me.jpg"}}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perspiciatis sint, illo quae dolorum porro eum magnam eligendi quaerat praesentium maiores nostrum, voluptas culpa velit, autem facere ex qui architecto.
