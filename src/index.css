@@ -1,4 +1,4 @@
-/* Page */
+/* Description Page */
 
 html {
   background-color: #e9eAeB;
@@ -6,10 +6,6 @@ html {
   font-family: 'Inter', sans-serif;
   display: flex;
   justify-content: center;
-}
-
-.container {
-  margin-top: 1em;
 }
 
 h1 {
@@ -34,10 +30,13 @@ h1 {
 
 .specs h3 {
   margin: 1rem 0 0;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .specs h3 span {
   color: hsl(23, 83%, 41%);
+  text-transform:none;
 }
 
 .specs h4 {
@@ -58,6 +57,17 @@ h1 {
 
 .specs .banner {
   margin-top: 1em;
+}
+
+.specs button {
+  margin: 1em 1em 0 0;
+  box-shadow: 5px 5px 5px 0 #0000001a;
+  border-radius: 8px;
+  padding: 1em 2em;
+  font-weight: bold;
+  display: inline;
+  width: 300px;
+  cursor: pointer;
 }
 
 /* Badge */
@@ -105,7 +115,7 @@ h1 {
 
 /* Toast */
 .toast {
-  position: absolute;
+  position: fixed;
   display: grid;
   gap: 5px;
   font-family: 'Inter', sans-serif;
@@ -553,25 +563,29 @@ h1 {
 }
 .badge.red,
 .banner.error,
-.toast.error {
+.toast.error,
+button.error {
   color: #991B1B;
   background-color: #FEE2E2;
 }
 .badge.yellow,
 .banner.warning,
-.toast.warning {
+.toast.warning,
+button.warning {
   color: #92400E;
   background-color: #FEF3C7;
 }
 .badge.green,
 .banner.success,
-.toast.success {
+.toast.success,
+button.success {
   color: #065F46;
   background-color: #D1FAE5;
 }
 .badge.blue,
 .banner.neutral,
-.toast.neutral {
+.toast.neutral,
+button.neutral {
   color: #1E40AF;
   background-color: #DBEAFE;
 }

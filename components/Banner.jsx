@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Banner({children, title, type="neutral"}){
+export default function Banner({children, title="Error", type="neutral"}){
     const className = `banner ${type}`
     return (
         <div className={className}>

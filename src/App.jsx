@@ -10,14 +10,16 @@ function App() {
 
   const [toastInfo, setToastInfo] = React.useState(null)
 
-  function handleToast() {
-    setToastInfo({position: "lower-left", type: "neutral", title: "Oopsie!", text: "Something went horribly wrong, and crushed the computer to a pancake."})
+  function handleToast(info) {
+    setToastInfo(info)
     setTimeout(()=>setToastInfo(null), 3000)
   }
 
   return (
       <>
         <h1>React Simple Components Library</h1>
+
+        {/* // BADGES */}
         <div className="specs">
           <h2>Badges</h2>
           <h3><span>&lt;Badge color="gray" shape="square"&gt;</span>Badge Text<span>&lt;/Badge&gt;</span></h3>
@@ -41,6 +43,7 @@ function App() {
           </ul>
         </div>
 
+        {/* // BANNERS */}
         <div className="specs">
           <h2>Banners</h2>
           <h3><span>&lt;Banner title="Error", type="neutral"&gt;</span>(Optional) Banner Text<span>&lt;/Banner&gt;</span></h3>
@@ -68,15 +71,41 @@ function App() {
           <Banner type="success" title="You've done it!">You have completed this task. Good job!</Banner>
         </div>
        
-
-          <div className="container">
-            <button onClick={handleToast}>Click for Toast</button>
+        {/* // TOASTS */}
+        <div className="specs">
+          <h2>Toasts</h2>
+          <h3><span>&lt;Toast title="Error", type="neutral", position="upper-left"&gt;</span>Toast Text<span>&lt;/Toast&gt;</span></h3>
+          <h3>Props</h3>
+          <h4>type:</h4>
+          <ul>
+            <li><Badge color="red" shape="square">error</Badge></li>
+            <li><Badge color="yellow" shape="square">warning</Badge></li>
+            <li><Badge color="green" shape="square">success</Badge></li>
+            <li><Badge color="blue" shape="square">neutral</Badge></li>
+          </ul>
+          <br />
+          <h4>title:</h4>
+          <ul>
+            <li>Text to appear at the top of the toast next to the icon</li>
+          </ul>
+          <br />
+          <h4>position:</h4>
+          <ul>
+            <li>upper-left, upper-right, lower-left, lower-right</li>
+          </ul>
+          <h3>Examples</h3>
+          <div className='toast-buttons'>
+            <button onClick={()=>handleToast({position: "upper-left", type: "error", title: "Fatal Error", text: "Something went horribly wrong, and crushed the computer to a pancake."})} className="error">Click for Upper-Left Error Toast</button>
+            <button onClick={()=>handleToast({position: "upper-right", type: "warning", title: "Oopsie!", text: "Something seems amiss. Make sure all your doodads are plugged into the proper thingamajigs."})} className="warning">Click for Upper-Right Warning Toast</button>
+            <br />
+            <button onClick={()=>handleToast({position: "lower-left", type: "neutral", title: "Information", text: "Things are fine. Juuuust fine."})} className="neutral">Click for Lower-Left Neutral Toast</button>
+            <button onClick={()=>handleToast({position: "lower-right", type: "success", title: "Success!", text: "Something went amazingly right. You crushed it!"})} className="success">Click for Lower-Right Success Toast</button>
           </div>
-        { toastInfo &&
-          <div className="container">
+          { toastInfo &&
             <Toast position={toastInfo.position} type={toastInfo.type} title={toastInfo.title}>{toastInfo.text}</Toast>
-          </div>  
-        }
+          }
+        </div>
+        
         <div className="container">
           <Card title="Simple Deployment">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</Card>
         </div>

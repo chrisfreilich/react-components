@@ -1,7 +1,7 @@
 import React from 'react'
 import { createPortal } from 'react-dom';
 
-export default function Toast({children, title, position="upper-left", type="neutral"}){
+export default function Toast({children, title="Error", position="upper-left", type="neutral"}){
     const className = `toast ${position} ${type}`
 
     return  createPortal(
