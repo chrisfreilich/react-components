@@ -70,6 +70,15 @@ h1 {
   cursor: pointer;
 }
 
+.card-examples {
+  display: flex;
+  gap: 10px;
+  padding: 1em;
+  background-color: #555;
+  border: 1px solid black;
+  justify-content: space-around;
+}
+
 /* Badge */
 .badge {
   display: inline;

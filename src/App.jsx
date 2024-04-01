@@ -105,13 +105,34 @@ function App() {
             <Toast position={toastInfo.position} type={toastInfo.type} title={toastInfo.title}>{toastInfo.text}</Toast>
           }
         </div>
-        
-        <div className="container">
-          <Card title="Simple Deployment">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</Card>
+
+        {/* CARDS */}
+        <div className="specs">
+          <h2>Cards</h2>
+          <h3><span>&lt;Card title, icon="/upload.png", bgColor="#3F75FE"&gt;</span>Main Card Text<span>&lt;/Card&gt;</span></h3>
+          <h3>Props</h3>
+          <h4>title:</h4>
+          <ul>
+            <li>Card title text</li>
+          </ul>
+          <br />
+          <h4>icon:</h4>
+          <ul>
+            <li>path to top icon</li>
+          </ul>
+          <br />
+          <h4>bgColor:</h4>
+          <ul>
+            <li>background color for the icon (for images with transparent backgrounds)</li>
+          </ul>
+          <h3>Examples</h3>
+            <div className="card-examples">
+              <Card title="Simple Deployment">This methodology allows clients to make updates to data elements of the interface without assistance.</Card>
+              <Card title="Robust Deployment" icon="/success.svg" bgColor='#137A2A'>This methodology ensures error-free updates to all interfaces.</Card>
+              <Card title="Titanium Deployment" icon="/x.svg" bgColor='black'>This methodology is too expensive for anyone to actually implement.</Card>
+            </div>
         </div>
-        <div className="container">
-          <Card title="Difficult Deployment" icon="/success.svg" bgColor='#ff3399'>Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</Card>
-        </div>
+
         <div class="container" style={{fontSize: "1.25rem", fontFamily: "Inter"}}>
           <Tooltip color="green">
             <Tooltip.DisplayText>
