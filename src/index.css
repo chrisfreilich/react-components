@@ -191,6 +191,8 @@ html {
 }
 
 .tooltip-popup {
+  margin-bottom:15px;
+  user-select: none;
   position: absolute;
   bottom: calc(100% + 0.5em);
   display: grid;
@@ -206,7 +208,18 @@ html {
   color: #c7c7c7;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
+}
 
+.tooltip-popup::after {
+  position: absolute;
+  display: block;
+  width: 0;
+  content: '';
+  border: 15px solid transparent;
+  border-bottom: 0;
+  border-top-color:#262626;
+  bottom: -15px;
+  left: 75px;
 }
 
 .tooltip-popup svg {
@@ -231,9 +244,29 @@ html {
 }
 .tooltip-popup .tooltip-popup-text {
   grid-area: txt;
+  font-weight: 400;
 }
 
-/* Color classes */
+/* Tooltip color classes */
+
+.tooltip-popup.blue-bold {
+  background-color: #1E40AF;
+  color: #E8EDFF;
+}
+.tooltip-popup.blue-bold .tooltip-popup-title {
+  color: white;
+}
+.tooltip-popup.blue-bold .envelope-icon>path {
+  stroke: #7EA6F2;
+}
+.tooltip-popup.blue-bold .x-icon>path {
+  fill: #D8D8D8;
+}
+.tooltip-popup.blue-bold::after {
+  border-top-color:#1E40AF;;
+}
+
+/* Badge, Banner Color classes */
 .badge.gray {
   color: #1F2937;
   background-color: #F3F4F6;

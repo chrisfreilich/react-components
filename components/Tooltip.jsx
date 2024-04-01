@@ -16,7 +16,7 @@ export default function Tooltip({color="black", children}){
     }
 
     return (
-        <TooltipContext.Provider value={toolTipId}>
+        <TooltipContext.Provider value={{toolTipId, color}}>
             <span className="tooltip" onMouseEnter={()=>handleMouseEnter(toolTipId)} onMouseLeave={()=>handleMouseLeave(toolTipId)}>
                 { children }
             </span>
