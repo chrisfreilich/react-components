@@ -52,6 +52,37 @@ html {
   font-weight: 400;
 }
 
+/* Toast */
+.toast {
+  display: grid;
+  gap: 5px;
+  font-family: 'Inter', sans-serif;
+  width: 384px;
+  padding: 1rem;
+  grid-template-columns: 20px 1fr;
+  grid-template-areas:  "icon title" 
+                        ".... message";
+  align-items: center;                      
+}
+
+.toast .toast-icon {
+  grid-area: icon;
+}
+
+.toast h5 {
+  margin: 0;
+  display: inline;
+  grid-area: title;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.toast .toast-text {
+  grid-area: message;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
 /* Card */
 .card {
   padding-top: 24px;
@@ -244,6 +275,7 @@ html {
 
 .tooltip-display-text {
   cursor: pointer;
+  display: inline;
 }
 
 .tooltip-popup {
@@ -251,7 +283,7 @@ html {
   user-select: none;
   position: absolute;
   bottom: calc(100% + 0.5em);
-  display: grid;
+  display: none;
   width: 384px;
   border-radius: 8px;
   grid-template-columns: 1fr 280px 1fr;
@@ -445,27 +477,31 @@ html {
 }
 
 
-/* Badge, Banner Color classes */
+/* Badge, Banner, Toast Color classes */
 .badge.gray {
   color: #1F2937;
   background-color: #F3F4F6;
 }
 .badge.red,
-.banner.error {
+.banner.error,
+.toast.error {
   color: #991B1B;
   background-color: #FEE2E2;
 }
 .badge.yellow,
-.banner.warning {
+.banner.warning,
+.toast.warning {
   color: #92400E;
   background-color: #FEF3C7;
 }
 .badge.green,
-.banner.success {
+.banner.success,
+.toast.success {
   color: #065F46;
   background-color: #D1FAE5;
 }
 .badge.blue,
+.banner.neutral,
 .banner.neutral {
   color: #1E40AF;
   background-color: #DBEAFE;

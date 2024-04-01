@@ -1,13 +1,14 @@
 import React from 'react'
 import Badge from '../components/Badge.jsx'
 import Banner from '../components/Banner.jsx'
+import Toast from '../components/Toast.jsx'
 import Card from '../components/Card.jsx'
 import Testimonial from '../components/Testimonial.jsx'
 import Tooltip from '../components/TT.jsx'
-import TooltipDisplayText from '../components/TooltipDisplayText.jsx'
-import TooltipPopup from '../components/TooltipPopup.jsx'
-import TooltipPopupTitle from '../components/TooltipPopupTitle.jsx'
-import TooltipPopupText from '../components/TooltipPopupText.jsx'
+// import TooltipDisplayText from '../components/TooltipDisplayText.jsx'
+// import TooltipPopup from '../components/TooltipPopup.jsx'
+// import TooltipPopupTitle from '../components/TooltipPopupTitle.jsx'
+// import TooltipPopupText from '../components/TooltipPopupText.jsx'
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           </Banner>
         </div>
         <div class="container">
+          <Toast type="error" title="Fatal Error">There is a giant problem with your application. You forgot to send the application fee. Your application has been thrown in the bin.</Toast>
+        </div>
+        <div class="container">
           <Card title="Simple Deployment">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</Card>
         </div>
         <div class="container">
@@ -35,13 +39,13 @@ function App() {
         </div>
         <div class="container" style={{fontSize: "1.25rem", fontFamily: "Inter"}}>
           <Tooltip color="green">
-            <TooltipDisplayText>
+            <Tooltip.DisplayText>
               This text has a tooltip!
-            </TooltipDisplayText>
-            <TooltipPopup>
-              <TooltipPopupTitle>This is a tooltip title</TooltipPopupTitle>
-              <TooltipPopupText>This is the tooltip explanatory text.</TooltipPopupText>
-            </TooltipPopup>
+            </Tooltip.DisplayText>
+            <Tooltip.Popup>
+              <Tooltip.PopupTitle>This is a tooltip title</Tooltip.PopupTitle>
+              <Tooltip.PopupText>This is the tooltip explanatory text.</Tooltip.PopupText>
+            </Tooltip.Popup>
           </Tooltip>
         </div>
         <div class="container">
