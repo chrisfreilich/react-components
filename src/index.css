@@ -54,6 +54,7 @@ html {
 
 /* Toast */
 .toast {
+  position: absolute;
   display: grid;
   gap: 5px;
   font-family: 'Inter', sans-serif;
@@ -62,13 +63,15 @@ html {
   grid-template-columns: 20px 1fr;
   grid-template-areas:  "icon title" 
                         ".... message";
-  align-items: center;                      
+  align-items: center;    
+  box-shadow: 0 4px 6px -2px #0000000D,
+              0 10px 15px -3px #0000001A;
+  z-index: 1000;
+                                
 }
-
 .toast .toast-icon {
   grid-area: icon;
 }
-
 .toast h5 {
   margin: 0;
   display: inline;
@@ -82,7 +85,22 @@ html {
   font-size: 0.875rem;
   font-weight: 400;
 }
-
+.toast.upper-left {
+  top: 1em;
+  left: 1em;
+}
+.toast.upper-right {
+  top: 1em;
+  right: 1em;
+}
+.toast.lower-left {
+  bottom: 1em;
+  left: 1em;
+}
+.toast.lower-right {
+  bottom: 1em;
+  right: 1em;
+}
 /* Card */
 .card {
   padding-top: 24px;
@@ -502,7 +520,7 @@ html {
 }
 .badge.blue,
 .banner.neutral,
-.banner.neutral {
+.toast.neutral {
   color: #1E40AF;
   background-color: #DBEAFE;
 }
