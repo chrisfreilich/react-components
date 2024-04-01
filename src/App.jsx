@@ -34,7 +34,7 @@ function App() {
           <Card title="Difficult Deployment" icon="/success.svg" bgColor='#ff3399'>Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</Card>
         </div>
         <div class="container" style={{fontSize: "1.25rem", fontFamily: "Inter"}}>
-          <Tooltip color="blue-bold">
+          <Tooltip color="green">
             <TooltipDisplayText>
               This text has a tooltip!
             </TooltipDisplayText>

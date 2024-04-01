@@ -12,7 +12,7 @@ export default function Tooltip({color="black", children}){
     }
 
     function handleMouseLeave(tooltip) {
-        // document.getElementById(tooltip).style.display = "none"
+        document.getElementById(tooltip).style.display = "none"
     }
 
     return (
