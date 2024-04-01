@@ -114,10 +114,14 @@ html {
   background-color: transparent;
   display: grid;
   grid-template-rows: 96px 400px 96px;
-  grid-template-areas: "..." 
+  grid-template-areas: "color" 
                        "text"
                        "...";
   position: relative;
+}
+
+.color-only {
+  grid-area: color;
 }
 
 .testimonial-image {
@@ -180,6 +184,58 @@ html {
   margin: 0;
   font-weight: 500;
 }
+
+
+@media (max-width: 1420px) {
+  .testimonial {
+    width: 376px;
+    height: 654px;
+    grid-template-rows: 103px auto;
+    grid-template-areas: "color" 
+                         "text";
+  }
+  
+  .testimonial-image {
+    height: 206px;
+    width: 344px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%); 
+    background-position: top;
+  }
+  
+  .testimonial-text {
+    padding: 180px 1em 0;
+    line-height: 32px;
+  }
+
+  .color-only {
+    background-color: white;
+  }
+
+  .testimonial-text .children {
+    max-height: 225px;
+    overflow: hidden;
+  }
+
+  .testimonial-text .children::before {
+    left: 0px;
+    top: 195px;
+  }
+  
+  .testimonial-text .children::after {
+    left: 317px;
+    top: 408px;
+  }
+  
+  .testimonial-text h5 {
+    margin: 1.5em 0 0 0;
+  }
+  .testimonial-text h5 {
+    line-height: normal;
+  }
+}
+
 
 /* Tooltip */
 .tooltip {
