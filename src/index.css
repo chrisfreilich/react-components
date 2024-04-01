@@ -23,6 +23,7 @@ h1 {
   padding: 1em 2em;
   border-radius: 15px;
   box-shadow: 0.25rem 0.5rem 1rem 0 #00000088;
+  margin-bottom: 2em;
 }
 
 .specs h2 {
@@ -53,6 +54,10 @@ h1 {
 .specs ul li {
   display: inline;
   margin: 0 5px;
+}
+
+.specs .banner {
+  margin-top: 1em;
 }
 
 /* Badge */

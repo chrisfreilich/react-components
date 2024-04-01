@@ -36,25 +36,39 @@ function App() {
           <br />
           <h4>shape:</h4>
           <ul>
-            <li><Badge color="green" shape="square">square</Badge></li>
-            <li><Badge color="green" shape="pill">pill</Badge></li>
+            <li><Badge color="indigo" shape="square">square</Badge></li>
+            <li><Badge color="indigo" shape="pill">pill</Badge></li>
           </ul>
+        </div>
 
-        </div>
-        <div className='container'>
-          <Banner type="error" title="Fatal Error">There is a giant problem with your application. You forgot to send the application fee. Your application has been thrown in the bin.</Banner>
-        </div>
-        <div className="container">
+        <div className="specs">
+          <h2>Banners</h2>
+          <h3><span>&lt;Banner title="Error", type="neutral"&gt;</span>(Optional) Banner Text<span>&lt;/Banner&gt;</span></h3>
+          <h3>Props</h3>
+          <h4>type:</h4>
+          <ul>
+            <li><Badge color="red" shape="square">error</Badge></li>
+            <li><Badge color="yellow" shape="square">warning</Badge></li>
+            <li><Badge color="green" shape="square">success</Badge></li>
+            <li><Badge color="blue" shape="square">neutral</Badge></li>
+          </ul>
+          <br />
+          <h4>title:</h4>
+          <ul>
+            <li>Text to appear at the top of the banner next to the icon</li>
+          </ul>
+          <h3>Examples</h3>
+          <Banner type="error" title="Error">There is a giant problem with your application. You forgot to send the application fee. Your application has been thrown in the bin.</Banner>
           <Banner type="warning" title="Warning! Something is wrong."></Banner>
-        </div>
-        <div className="container">
-          <Banner type="neutral" title="Available icons">
-            <img src="/error.svg" alt="" />
-            <img src="/warning.svg" alt="" />
-            <img src="/success.svg" alt="" />
-            <img src="/neutral.svg" alt="" />
+          <Banner type="neutral" title="Neutral Banner Title">
+            You can put whatever you want in the banner, including images:
+            &nbsp;
+            <img src="/envelope.svg" alt="" />
           </Banner>
+          <Banner type="success" title="You've done it!">You have completed this task. Good job!</Banner>
         </div>
+       
+
           <div className="container">
             <button onClick={handleToast}>Click for Toast</button>
           </div>
