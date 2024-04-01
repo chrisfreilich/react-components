@@ -17,8 +17,31 @@ function App() {
 
   return (
       <>
-        <Badge color="purple" shape="pill">First Badge!</Badge>
-        <div className="container">
+        <h1>React Simple Components Library</h1>
+        <div className="specs">
+          <h2>Badges</h2>
+          <h3><span>&lt;Badge color="gray" shape="square"&gt;</span>Badge Text<span>&lt;/Badge&gt;</span></h3>
+          <h3>Props</h3>
+          <h4>color:</h4>
+          <ul>
+            <li><Badge color="gray" shape="square">gray</Badge></li>
+            <li><Badge color="red" shape="square">red</Badge></li>
+            <li><Badge color="yellow" shape="square">yellow</Badge></li>
+            <li><Badge color="green" shape="square">green</Badge></li>
+            <li><Badge color="blue" shape="square">blue</Badge></li>
+            <li><Badge color="indigo" shape="square">indigo</Badge></li>
+            <li><Badge color="purple" shape="square">purple</Badge></li>
+            <li><Badge color="pink" shape="square">pink</Badge></li>
+          </ul>
+          <br />
+          <h4>shape:</h4>
+          <ul>
+            <li><Badge color="green" shape="square">square</Badge></li>
+            <li><Badge color="green" shape="pill">pill</Badge></li>
+          </ul>
+
+        </div>
+        <div className='container'>
           <Banner type="error" title="Fatal Error">There is a giant problem with your application. You forgot to send the application fee. Your application has been thrown in the bin.</Banner>
         </div>
         <div className="container">

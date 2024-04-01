@@ -2,10 +2,57 @@
 
 html {
   background-color: #e9eAeB;
+  margin: 2rem;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   margin-top: 1em;
+}
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+}
+
+.specs {
+  background-color: white;
+  color: #262626;
+  padding: 1em 2em;
+  border-radius: 15px;
+  box-shadow: 0.25rem 0.5rem 1rem 0 #00000088;
+}
+
+.specs h2 {
+  margin: 0;
+  font-family: "Permanent Marker", cursive;
+  font-size: 2rem;
+}
+
+.specs h3 {
+  margin: 1rem 0 0;
+}
+
+.specs h3 span {
+  color: hsl(23, 83%, 41%);
+}
+
+.specs h4 {
+  display: inline-block;
+  margin: 0;
+  line-height: 36px;
+  min-width: 100px;
+}
+.specs ul {
+  list-style: none;
+  display: inline;
+  padding: 0;
+}
+.specs ul li {
+  display: inline;
+  margin: 0 5px;
 }
 
 /* Badge */
@@ -14,7 +61,6 @@ html {
   padding: .25rem 1rem;
   font-size: 0.875rem;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
   border-radius: 4px;
 }
 
@@ -24,7 +70,7 @@ html {
 
 /* Banner */
 .banner {
-  margin: 0 0;
+  margin: 0;
   display: grid;
   gap: 5px;
   font-family: 'Inter', sans-serif;
