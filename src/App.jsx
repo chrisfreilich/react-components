@@ -46,7 +46,7 @@ function App() {
       {/* // BANNERS */}
       <div className="specs">
         <h2>Banners</h2>
-        <h3><pre><span>&lt;Banner title="Error", type="neutral"&gt;</span>(Optional) Banner Text<span>&lt;/Banner&gt;</span></pre></h3>
+        <h3><pre><span>&lt;Banner title="Info", type="neutral"&gt;</span>(Optional) Banner Text<span>&lt;/Banner&gt;</span></pre></h3>
         <h3>Props</h3>
         <h4>type:</h4>
         <ul>
