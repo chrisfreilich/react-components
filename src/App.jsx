@@ -43,7 +43,7 @@ function App() {
         </ul>
       </div>
 
-      {/* // BANNERS */}
+      {/* BANNERS */}
       <div className="specs">
         <h2>Banners</h2>
         <h3><pre><span>&lt;Banner title="Info", type="neutral"&gt;</span>(Optional) Banner Text<span>&lt;/Banner&gt;</span></pre></h3>
@@ -71,7 +71,7 @@ function App() {
         <Banner type="success" title="You've done it!">You have completed this task. Good job!</Banner>
       </div>
 
-      {/* // TOASTS */}
+      {/* TOASTS */}
       <div className="specs">
         <h2>Toasts</h2>
         <h3><pre><span>&lt;Toast title="Error", type="neutral", position="upper-left"&gt;</span>Toast Text<span>&lt;/Toast&gt;</span></pre></h3>
